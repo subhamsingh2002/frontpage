@@ -1,0 +1,520 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0A0118;
+    color: #ffff;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #313131;
+    padding: 10px 40px;
+    margin-top: 3rem;
+    margin-right: 5rem;
+    margin-left: 5rem;
+    border-radius: 100px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 50px;
+}
+
+.nav-links a,
+.auth-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-links a:hover,
+.nav-links a:hover {
+    color: #79ff39;
+}
+
+.top {
+    text-align: center;
+    padding: 70px 20px;
+}
+
+h1,
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+p {
+    margin: 20px auto;
+    width: 60%;
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.btn-explore {
+    background-color: #79ff39;
+    color: #0b0b0c;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-explore:hover {
+    background-color: #66cc33;
+}
+
+.dashboard-preview {
+    text-align: center;
+    /* Centers the image horizontally */
+}
+
+.dashboard-preview img {
+    width: 1000px;
+    height: 500px;
+}
+
+.products-section {
+    padding: 60px 20px;
+    /* background-color: #141414; */
+}
+
+.products-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    /* background-color: #1e1e1e; */
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    cursor: pointer;
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    width: 170px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-card button {
+    /* margin-top: 10px; */
+    background-color: #79ff39;
+    border: none;
+    padding: 8px 45px;
+    color: #0b0b0c;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#bt1 button {
+    width: 172px;
+    height: auto;
+}
+
+#bt2 button {
+    width: 172px;
+}
+
+#bt4 button {
+    width: 172px;
+}
+
+#video-container:hover {
+    cursor: pointer;
+}
+
+#video-container {
+    text-align: center;
+}
+
+video {
+    width: 70%;
+    object-fit: cover;
+}
+
+.testimonials {
+    background: linear-gradient(114.05deg, #0A0118 3.97%, #313131 65.43%);
+    /* width: 800px; */
+    height: 750px;
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 90px;
+    border-radius: 10px;
+    /* padding-top: 5px; */
+}
+
+.head p {
+    text-align: center;
+    font-size: large;
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    padding-bottom: 100px;
+    /* display: flex;
+    justify-content: space-evenly;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    border-radius: 10px; */
+}
+
+.card1,
+.card2,
+.card3 {
+    background-color: white;
+    width: 40%;
+    height: auto;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 30px;
+}
+
+.review-text {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.info {
+    flex-grow: 1;
+}
+
+.info h4 {
+    margin: 0;
+    font-size: 14px;
+    color: #222;
+}
+
+.info p {
+    margin: 0;
+    font-size: 12px;
+    color: #666;
+}
+
+.stars {
+    color: #FFD700;
+    font-size: 14px;
+}
+
+scroll-container {
+    display: flex;
+    width: 300px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    border-radius: 10px;
+    white-space: nowrap;
+    scrollbar-width: none;
+    /* Hide scrollbar */
+    -ms-overflow-style: none;
+}
+
+
+/* Hide scrollbar for WebKit browsers */
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Each page block */
+
+.scroll-content {
+    flex: 0 0 100%;
+    width: 300px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    scroll-snap-align: start;
+    background: white;
+    margin-right: 5px;
+}
+
+
+/* Dot navigation */
+
+.dots-container {
+    /* margin-top: 5px; */
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+
+/* Style of the dots */
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: #ccff66;
+    /* Light green like in the image */
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+
+/* Active dot */
+
+.dot.active {
+    background: #90ee90;
+    /* Brighter green */
+}
+
+.faq-container {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    margin-left: 14rem;
+    background: linear-gradient(147.27deg, #0A0118 48.58%, #313131 104.96%);
+}
+
+
+/* FAQ Header */
+
+.faq-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.faq-container p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+
+/* FAQ Box */
+
+.faq-box {
+    background: #313131;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+/* FAQ Item */
+
+.faq {
+    background: #0d0d18;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+
+/* FAQ Question */
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+
+/* Arrow Icon */
+
+.arrow {
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* FAQ Answer (Initially Hidden) */
+
+.faq-answer {
+    display: none;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #bdbdbd;
+}
+
+
+/* When Active (Expand Answer) */
+
+.faq.active .faq-answer {
+    display: block;
+}
+
+.faq.active .arrow {
+    transform: rotate(180deg);
+}
+
+.support {
+    position: relative;
+    margin-top: 5em;
+    margin-left: 5%;
+    text-align: center;
+    width: 60%;
+    height: 150px;
+    left: 200px;
+}
+
+.support-container #heading {
+    font-family: "Raleway", serif;
+    font-weight: 600;
+    line-height: 56.35px;
+    font-size: 40px;
+}
+
+.support-container #desc {
+    font-family: "Open Sans", serif;
+    font-size: 12px;
+}
+
+.support .btn {
+    margin-top: 1.5rem;
+    background-color: limegreen;
+    border: none;
+    padding: 10px 20px;
+    /* margin-top: 20px; */
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+
+/* Footer Styling */
+
+.footer {
+    background: #0A0118;
+    padding: 40px 60px;
+    border-top: 1px solid #D9D9D9;
+    margin-top: 40px;
+}
+
+
+/* Footer Container */
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Left Section (Logo & Description) */
+
+.footer-left {
+    max-width: 300px;
+}
+
+.footer-left .logo {
+    width: 60px;
+    /* Adjust logo size */
+    margin-bottom: 10px;
+}
+
+.footer-left p {
+    /* font-size: 14px; */
+    margin-left: 7px;
+    margin-bottom: 20px;
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0px;
+}
+
+
+/* Social Icons */
+
+.social-icons img {
+    width: 25px;
+    margin-right: 8px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+
+/* Footer Links */
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+
+/* Footer Column */
+
+.footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.footer-column p {
+    font-size: 12px;
+    color: #bdbdbd;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 6px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #90ee90;
+    /* Light green hover effect */
+}
+
+
+/* Footer Bottom (Copyright) */
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 12px;
+    color: #bdbdbd;
+}
